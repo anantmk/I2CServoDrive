@@ -1,2 +1,8 @@
 # I2CServoDrive
-# Test
+
+# ToDo
+
+-> initial value per channel
+-> create header file
+-> defines
+
