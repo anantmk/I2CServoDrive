@@ -132,8 +132,8 @@ ISR(TIMER1_COMPA_vect)
 {
     if (rxbuffer[0] == 111)
     {
-        //LED on
-        PORTB |= (1 << PIN6);
+        //LED off
+        PORTB &= ~(1 << PIN6);
         
         //set all PWM channels to high
         if (CH1_out > 0) PORTB |= (1 << PIN0);
@@ -156,8 +156,8 @@ ISR(TIMER1_COMPA_vect)
     }
     else
     {
-        //LED off
-        PORTB &= ~(1 << PIN6);
+        //LED on
+        PORTB |= (1 << PIN6);        
         
         //data not OK
         dataOK = 0;
